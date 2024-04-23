@@ -72,8 +72,9 @@ class MemoTableViewController: UITableViewController {
         
         let memo = memos[indexPath.row] as? Memo
         
-        cell.textLabel?.text = memo?.memoSubject
-        cell.detailTextLabel.text = memo?.memoDate
+        cell.textLabel?.text = memo?.title
+        //need to be formated
+        cell.detailTextLabel.text = memo?.date
         cell.accessoryType = .detailDisclosureButton
         return cell
     }
@@ -83,13 +84,13 @@ class MemoTableViewController: UITableViewController {
             let memoController = segue.destination as? MemoViewController
             let selectedRow = self.tableView.indexPath(for: sender as! UITableViewCell)?.row
             let selectedMemo = memos[selectedRow!] as? Memo
-            memoController?.currentMemo = selectedMemo!
+            memoController?.currentMemo = selectedMemo
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedMemo = memos[indexPath.row] as? Memo
-        let subject = selectedMemo.memoSubject
+        let subject = selectedMemo?.title
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "MemoController") as? MemoViewController

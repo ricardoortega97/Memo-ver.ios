@@ -17,6 +17,7 @@
 		51ED104D2BD6DD20008FF4DC /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED104C2BD6DD20008FF4DC /* MemoTableViewController.swift */; };
 		51ED10522BD6E2C9008FF4DC /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10512BD6E2C9008FF4DC /* MemoViewController.swift */; };
 		51ED10542BD6E333008FF4DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10532BD6E333008FF4DC /* SettingsViewController.swift */; };
+		51ED10562BD826CA008FF4DC /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10552BD826CA008FF4DC /* DateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		51ED104C2BD6DD20008FF4DC /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
 		51ED10512BD6E2C9008FF4DC /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		51ED10532BD6E333008FF4DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		51ED10552BD826CA008FF4DC /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 		51ED10272BD1E342008FF4DC = {
 			isa = PBXGroup;
 			children = (
-				51ED10532BD6E333008FF4DC /* SettingsViewController.swift */,
 				51ED10322BD1E342008FF4DC /* Memo ver.ios */,
 				51ED10312BD1E342008FF4DC /* Products */,
 			);
@@ -65,10 +66,12 @@
 		51ED10322BD1E342008FF4DC /* Memo ver.ios */ = {
 			isa = PBXGroup;
 			children = (
+				51ED10532BD6E333008FF4DC /* SettingsViewController.swift */,
 				51ED10332BD1E342008FF4DC /* AppDelegate.swift */,
 				51ED10352BD1E342008FF4DC /* SceneDelegate.swift */,
 				51ED10372BD1E342008FF4DC /* ViewController.swift */,
 				51ED10392BD1E342008FF4DC /* Main.storyboard */,
+				51ED10552BD826CA008FF4DC /* DateViewController.swift */,
 				51ED10512BD6E2C9008FF4DC /* MemoViewController.swift */,
 				51ED104C2BD6DD20008FF4DC /* MemoTableViewController.swift */,
 				51ED103F2BD1E343008FF4DC /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51ED10562BD826CA008FF4DC /* DateViewController.swift in Sources */,
 				51ED104D2BD6DD20008FF4DC /* MemoTableViewController.swift in Sources */,
 				51ED10382BD1E342008FF4DC /* ViewController.swift in Sources */,
 				51ED10542BD6E333008FF4DC /* SettingsViewController.swift in Sources */,
