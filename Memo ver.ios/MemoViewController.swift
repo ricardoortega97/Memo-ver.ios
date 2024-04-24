@@ -29,6 +29,7 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         if currentMemo != nil{
             txtTitle.text = currentMemo!.title
             txtContent.text = currentMemo!.content
+            lblLevel.text = currentMemo!.cruciality
             
             let formatter = DateFormatter()
             formatter.dateStyle = .short
@@ -60,6 +61,19 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         formatter.dateStyle = .short
         lblDate.text = formatter.string(from: date)
     }
+    
+    func levelChanged(selectedLevel: String) {
+        print("Level changed to: \(selectedLevel)") // Check if this prints the correct level
+        
+        if currentMemo == nil {
+            let context = appDelegate.persistentContainer.viewContext
+            currentMemo = Memo(context: context)
+        }
+        currentMemo?.cruciality = selectedLevel
+        lblLevel.text = selectedLevel
+        print("lblLevel text set to: \(lblLevel.text ?? "nil")") // Check if lblLevel text is set correctly
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

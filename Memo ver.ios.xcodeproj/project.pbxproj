@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		518B8DA82BD8B307006C2DD2 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518B8DA72BD8B307006C2DD2 /* LevelViewController.swift */; };
 		51ED10342BD1E342008FF4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10332BD1E342008FF4DC /* AppDelegate.swift */; };
 		51ED10362BD1E342008FF4DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10352BD1E342008FF4DC /* SceneDelegate.swift */; };
 		51ED10382BD1E342008FF4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10372BD1E342008FF4DC /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		518B8DA72BD8B307006C2DD2 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		51ED10302BD1E342008FF4DC /* Memo ver.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memo ver.ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51ED10332BD1E342008FF4DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51ED10352BD1E342008FF4DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				51ED10352BD1E342008FF4DC /* SceneDelegate.swift */,
 				51ED10372BD1E342008FF4DC /* ViewController.swift */,
 				51ED10392BD1E342008FF4DC /* Main.storyboard */,
+				518B8DA72BD8B307006C2DD2 /* LevelViewController.swift */,
 				51ED10552BD826CA008FF4DC /* DateViewController.swift */,
 				51ED10512BD6E2C9008FF4DC /* MemoViewController.swift */,
 				51ED104C2BD6DD20008FF4DC /* MemoTableViewController.swift */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51ED10562BD826CA008FF4DC /* DateViewController.swift in Sources */,
+				518B8DA82BD8B307006C2DD2 /* LevelViewController.swift in Sources */,
 				51ED104D2BD6DD20008FF4DC /* MemoTableViewController.swift in Sources */,
 				51ED10382BD1E342008FF4DC /* ViewController.swift in Sources */,
 				51ED10542BD6E333008FF4DC /* SettingsViewController.swift in Sources */,

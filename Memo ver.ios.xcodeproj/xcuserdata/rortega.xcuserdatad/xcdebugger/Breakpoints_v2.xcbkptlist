@@ -20,5 +20,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6E91A13-494F-4B5D-B99E-3D6E05C67046"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Memo ver.ios/MemoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "dateChanged(date:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D6E91A13-494F-4B5D-B99E-3D6E05C67046 - 3472b909d5c428d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memo_ver_ios.MemoViewController.dateChanged(date: Foundation.Date) -&gt; ()"
+                  moduleName = "Memo ver.ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rortega/Xcode/Memo%20ver.ios/Memo%20ver.ios/MemoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "D6E91A13-494F-4B5D-B99E-3D6E05C67046 - 3472b909d5c428d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memo_ver_ios.MemoViewController.dateChanged(date: Foundation.Date) -&gt; ()"
+                  moduleName = "Memo ver.ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rortega/Xcode/Memo%20ver.ios/Memo%20ver.ios/MemoViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "648">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96295461-3AE3-4775-A94B-191B1F9FF2E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Memo ver.ios/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
