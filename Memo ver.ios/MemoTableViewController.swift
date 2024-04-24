@@ -72,7 +72,7 @@ class MemoTableViewController: UITableViewController {
         
         let memo = memos[indexPath.row] as? Memo
         
-        cell.textLabel?.text = (memo?.title)! + "Level: "
+        cell.textLabel?.text = (memo?.title)! + "  Level: " + (memo?.cruciality)!
         //need to be formated
         let formatter = DateFormatter()
         formatter.dateStyle = .short
