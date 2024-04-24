@@ -72,11 +72,11 @@ class MemoTableViewController: UITableViewController {
         
         let memo = memos[indexPath.row] as? Memo
         
-        cell.textLabel?.text = (memo?.title)! + " Level: " + (memo?.cruciality)!
+        cell.textLabel?.text = (memo?.title)!  /*" Level: " + (memo?.cruciality)!*/
         //need to be formated
         let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        cell.detailTextLabel?.text = formatter.string(from: (memo?.date)!)
+        formatter.dateStyle = .short
+        cell.detailTextLabel?.text = formatter.string(from: memo!.date!)
         cell.accessoryType = .detailDisclosureButton
         return cell
     }
@@ -102,7 +102,7 @@ class MemoTableViewController: UITableViewController {
         
         
         
-        let alertController = UIAlertController(title: "Memo selected", message: "Selected row: \(indexPath.row) (\(subject))", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Memo selected", message: "Selected row: \(indexPath.row) (\(String(describing: subject)))", preferredStyle: .alert)
         
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         

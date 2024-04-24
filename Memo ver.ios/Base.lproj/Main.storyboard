@@ -80,7 +80,7 @@
                                     <segment title="Edit"/>
                                 </segments>
                                 <connections>
-                                    <action selector="chagedEditMode:" destination="ufc-Uc-eNv" eventType="valueChanged" id="nVW-hE-VNU"/>
+                                    <action selector="changeEditMode:" destination="ufc-Uc-eNv" eventType="valueChanged" id="rOb-K5-mC9"/>
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-rs-VK0">
@@ -268,7 +268,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="r2F-ai-AQq" detailTextLabel="Ykb-6s-phN" style="IBUITableViewCellStyleSubtitle" id="cre-4z-gBi" customClass="MemosCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemosCell" textLabel="r2F-ai-AQq" detailTextLabel="Ykb-6s-phN" style="IBUITableViewCellStyleSubtitle" id="cre-4z-gBi" customClass="MemosCell">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cre-4z-gBi" id="piP-uR-3Uj">
@@ -304,7 +304,7 @@
                     <navigationItem key="navigationItem" id="yV9-cw-NJz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Un0-V1-kq3">
                             <connections>
-                                <segue destination="ufc-Uc-eNv" kind="show" id="CJt-IT-jZl"/>
+                                <segue destination="ufc-Uc-eNv" kind="show" identifier="AddMemo" id="CJt-IT-jZl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

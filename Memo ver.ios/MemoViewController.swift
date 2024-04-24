@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate {
+class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate, UITextViewDelegate {
     
     var currentMemo: Memo?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -25,17 +25,31 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       //populating the UI
+        if currentMemo != nil{
+            txtTitle.text = currentMemo!.title
+            txtContent.text = currentMemo!.content
+            
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            if currentMemo!.date != nil {
+                lblDate.text = formatter.string(from: currentMemo!.date!)
+            }
+        }
+        
         self.changeEditMode(self)
         
+       //Listeners
         let textFields: [UITextField] = [txtTitle]
         let _: [UITextView] = [txtContent]
         
         for textField in textFields {
             textField.addTarget(self, action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
         }
+        txtContent.delegate = self
        
     }
-    
+    //implemention of saving date
     func dateChanged(date: Date) {
         if currentMemo == nil {
             let context = appDelegate.persistentContainer.viewContext
@@ -67,6 +81,8 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
             
             btnChange.isHidden = true
             btnPick.isHidden = true
+            
+            navigationItem.rightBarButtonItem = nil
         }
         else if sgmtEditMode.selectedSegmentIndex == 1 {
             for textField in textFields {
@@ -78,16 +94,29 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
             }
             btnChange.isHidden = false
             btnPick.isHidden = false
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self,
+                                                                action: #selector(self.saveMemo))
         }
     }
+    
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if currentMemo == nil {
             let context = appDelegate.persistentContainer.viewContext
             currentMemo = Memo(context: context)
         }
         currentMemo?.title = txtTitle.text
-        currentMemo?.content = txtContent.text
         return true
+    }
+    //Content View
+    func textViewDidChange(_ textView: UITextView) {
+        if currentMemo == nil {
+            let context = appDelegate.persistentContainer.viewContext
+            currentMemo = Memo(context: context)
+        }
+        currentMemo?.content = txtContent.text
+        
+        appDelegate.saveContext()
     }
     // MARK: - Navigation
 
