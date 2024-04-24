@@ -35,6 +35,17 @@ class MemoViewController: UIViewController, UITextFieldDelegate {
         }
        
     }
+    
+    func dateChanged(date: Date) {
+        if currentMemo == nil {
+            let context = appDelegate.persistentContainer.viewContext
+            currentMemo = Memo(context: context)
+        }
+        currentMemo?.date = date
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        lblDate.text = formatter.string(from: date)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -84,8 +95,8 @@ class MemoViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         if(segue.identifier == "segueMemoDate") {
-            let dateController = segue.destination as! DateViewController = self
-            dateController.delegate
+            let dateController = segue.destination as! DateViewController
+            dateController.delegate = self
         }
         // Pass the selected object to the new view controller.
     }
