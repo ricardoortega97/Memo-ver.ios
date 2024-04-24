@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate, UITextViewDelegate {
+class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate, UITextViewDelegate, LevelControllerDelegate {
     
     var currentMemo: Memo?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -62,7 +62,7 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         lblDate.text = formatter.string(from: date)
     }
     
-    func levelChanged(selectedLevel: String) {
+    func didSelectLevel(_ selectedLevel: String) {
         print("Level changed to: \(selectedLevel)") // Check if this prints the correct level
         
         if currentMemo == nil {
@@ -72,7 +72,8 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         currentMemo?.cruciality = selectedLevel
         lblLevel.text = selectedLevel
         print("lblLevel text set to: \(lblLevel.text ?? "nil")") // Check if lblLevel text is set correctly
-    }
+        
+        }
 
 
     override func didReceiveMemoryWarning() {
@@ -140,6 +141,11 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
         if(segue.identifier == "segueMemoDate") {
             let dateController = segue.destination as! DateViewController
             dateController.delegate = self
+        } 
+        //This was the issue that did not grabed the picked tag id
+        else if segue.identifier == "segueMemoPick" {
+            let levelController = segue.destination as! LevelViewController
+            levelController.delegate = self
         }
         // Pass the selected object to the new view controller.
     }

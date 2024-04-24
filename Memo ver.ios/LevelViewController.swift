@@ -62,16 +62,17 @@ class LevelViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
     }
     @objc func saveLevel() {
-           let selectedRow = pvLevel.selectedRow(inComponent: 0)
-           let selectedLevel = levelItems[selectedRow]
-           
-           // Save selected level to UserDefaults
-           UserDefaults.standard.set(selectedLevel, forKey: "selectedLevel")
-           
-           // Notify delegate about the level change
+        let selectedRow = pvLevel.selectedRow(inComponent: 0)
+        let selectedLevel = levelItems[selectedRow]
+        
+        // Save selected level to UserDefaults
+        UserDefaults.standard.set(selectedLevel, forKey: "selectedLevel")
+        
+        // Notify delegate about the level change and update lblText
         delegate?.didSelectLevel(selectedLevel)
-           
-           // Optionally, you can dismiss the view controller after saving
-           navigationController?.popViewController(animated: true)
-       }
+        
+        // Optionally, you can dismiss the view controller after saving
+        navigationController?.popViewController(animated: true)
+    }
+
 }
