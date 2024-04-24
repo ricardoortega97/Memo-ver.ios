@@ -72,9 +72,11 @@ class MemoTableViewController: UITableViewController {
         
         let memo = memos[indexPath.row] as? Memo
         
-        cell.textLabel?.text = memo?.title
+        cell.textLabel?.text = (memo?.title)! + " Level: " + (memo?.cruciality)!
         //need to be formated
-        cell.detailTextLabel.text = memo?.date
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        cell.detailTextLabel?.text = formatter.string(from: (memo?.date)!)
         cell.accessoryType = .detailDisclosureButton
         return cell
     }
