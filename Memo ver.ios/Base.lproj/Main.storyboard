@@ -55,7 +55,7 @@
                             <constraint firstItem="DLr-uY-Ohq" firstAttribute="centerX" secondItem="mup-hK-6l2" secondAttribute="centerX" id="z0J-Al-Edg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="TbY-zb-4VE"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="TbY-zb-4VE"/>
                     <connections>
                         <outlet property="pckSortField" destination="7Jy-xa-RX0" id="zMX-y7-4By"/>
                         <outlet property="swAscending" destination="BDr-KG-p4K" id="Vjb-zM-H6H"/>
@@ -95,7 +95,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5n-KB-Iuw">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5n-KB-Iuw">
                                                 <rect key="frame" x="111.66666666666669" y="35.333333333333343" width="150" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="r5U-68-kyx"/>
@@ -116,7 +116,7 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jbe-DY-qKV">
                                                 <rect key="frame" x="36.666666666666657" y="35.333333333333343" width="300" height="150"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.76709423485461525" green="0.7874672006900072" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="awd-G4-l6i"/>
                                                     <constraint firstAttribute="height" constant="150" id="eIY-gK-dnR"/>
@@ -139,7 +139,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/1997" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osc-gJ-o2S">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/1997" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osc-gJ-o2S">
                                                         <rect key="frame" x="50.666666666666664" y="0.0" width="82.333333333333343" height="34.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -164,7 +164,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSw-9c-n9W">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSw-9c-n9W">
                                                         <rect key="frame" x="54.333333333333329" y="0.0" width="31" height="34.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -342,11 +342,11 @@
             </objects>
             <point key="canvasLocation" x="926" y="3"/>
         </scene>
-        <!--Item 1-->
+        <!--Memos-->
         <scene sceneID="8jn-n7-2qO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tep-rh-3Ob" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="jej-4A-2cc"/>
+                    <tabBarItem key="tabBarItem" title="Memos" image="square.and.pencil" catalog="system" id="jej-4A-2cc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOu-Pr-V3Q">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -366,6 +366,8 @@
         <segue reference="CJt-IT-jZl"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

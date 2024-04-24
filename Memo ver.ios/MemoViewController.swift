@@ -106,7 +106,7 @@ class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerD
             }
             for textView in textViews {
                 textView.isEditable = true
-            }
+                            }
             btnChange.isHidden = false
             btnPick.isHidden = false
             

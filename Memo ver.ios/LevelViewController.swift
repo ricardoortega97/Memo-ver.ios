@@ -17,7 +17,7 @@ class LevelViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     weak var delegate: LevelControllerDelegate?
     
-    let levelItems: Array<String> = ["Low" , "Medium", "Top"]
+    let levelItems: Array<String> = ["low" , "medium", "top"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
