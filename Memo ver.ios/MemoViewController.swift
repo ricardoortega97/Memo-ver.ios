@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class MemoViewController: UIViewController, UITextFieldDelegate {
+class MemoViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate {
     
     var currentMemo: Memo?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate

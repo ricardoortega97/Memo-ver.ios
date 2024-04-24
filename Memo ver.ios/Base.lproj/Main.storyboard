@@ -15,10 +15,51 @@
                     <view key="view" contentMode="scaleToFill" id="mup-hK-6l2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="DLr-uY-Ohq">
+                                <rect key="frame" x="36.666666666666657" y="203.33333333333334" width="320" height="445.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort Order:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcW-Wk-ecJ">
+                                        <rect key="frame" x="117.33333333333334" y="0.0" width="85" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jy-xa-RX0">
+                                        <rect key="frame" x="0.0" y="109.33333333333334" width="320" height="216.00000000000003"/>
+                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-q6-7po">
+                                        <rect key="frame" x="67.666666666666671" y="414.33333333333326" width="184.66666666666663" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ascending Sort: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcg-Sv-QmN">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDr-KG-p4K">
+                                                <rect key="frame" x="135.66666666666669" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="sortDirectionChanged:" destination="ete-Hc-cFR" eventType="valueChanged" id="fHN-vQ-esE"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vp0-mu-MBr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DLr-uY-Ohq" firstAttribute="centerY" secondItem="mup-hK-6l2" secondAttribute="centerY" id="Jj2-d3-bPp"/>
+                            <constraint firstItem="DLr-uY-Ohq" firstAttribute="centerX" secondItem="mup-hK-6l2" secondAttribute="centerX" id="z0J-Al-Edg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="TbY-zb-4VE"/>
+                    <connections>
+                        <outlet property="pckSortField" destination="7Jy-xa-RX0" id="zMX-y7-4By"/>
+                        <outlet property="swAscending" destination="BDr-KG-p4K" id="Vjb-zM-H6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwj-1L-QDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +150,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Change"/>
                                                         <connections>
-                                                            <segue destination="Eu1-SS-DXG" kind="show" id="iJ1-m7-we2"/>
+                                                            <segue destination="Eu1-SS-DXG" kind="show" identifier="segueMemoDate" id="iJ1-m7-we2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

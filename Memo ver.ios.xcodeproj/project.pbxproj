@@ -18,6 +18,7 @@
 		51ED10522BD6E2C9008FF4DC /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10512BD6E2C9008FF4DC /* MemoViewController.swift */; };
 		51ED10542BD6E333008FF4DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10532BD6E333008FF4DC /* SettingsViewController.swift */; };
 		51ED10562BD826CA008FF4DC /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED10552BD826CA008FF4DC /* DateViewController.swift */; };
+		B33114742BD864CB0079F185 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33114732BD864CB0079F185 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		51ED10512BD6E2C9008FF4DC /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		51ED10532BD6E333008FF4DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		51ED10552BD826CA008FF4DC /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		B33114732BD864CB0079F185 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				51ED10532BD6E333008FF4DC /* SettingsViewController.swift */,
+				B33114732BD864CB0079F185 /* Constants.swift */,
 				51ED10332BD1E342008FF4DC /* AppDelegate.swift */,
 				51ED10352BD1E342008FF4DC /* SceneDelegate.swift */,
 				51ED10372BD1E342008FF4DC /* ViewController.swift */,
@@ -161,6 +164,7 @@
 				51ED103E2BD1E342008FF4DC /* Memo_ver_ios.xcdatamodeld in Sources */,
 				51ED10342BD1E342008FF4DC /* AppDelegate.swift in Sources */,
 				51ED10362BD1E342008FF4DC /* SceneDelegate.swift in Sources */,
+				B33114742BD864CB0079F185 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,7 +42,7 @@ class MemoTableViewController: UITableViewController {
         let sortAscending = settings.bool(forKey: Constants.kSortDirectionAscending)
         
         let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSManagedObject>{entityName: "Memo"}
+        let request = NSFetchRequest<NSManagedObject>(entityName: "Memo")
         //specify sorting
         let sortDescriptor = NSSortDescriptor(key: sortField, ascending: sortAscending)
         let sortDescriptorArray = [sortDescriptor]
@@ -92,10 +92,13 @@ class MemoTableViewController: UITableViewController {
         let selectedMemo = memos[indexPath.row] as? Memo
         let subject = selectedMemo?.title
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "MemoController") as? MemoViewController
-        controller?.currentMemo = selectedMemo
-        self.navigationController?.pushViewController(controller!, animated: true)
+        let actionHandler = { (action:UIAlertAction!) -> Void in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MemoController") as? MemoViewController
+            controller?.currentMemo = selectedMemo
+            self.navigationController?.pushViewController(controller!, animated: true)        }
+        
+        
         
         let alertController = UIAlertController(title: "Memo selected", message: "Selected row: \(indexPath.row) (\(subject))", preferredStyle: .alert)
         
